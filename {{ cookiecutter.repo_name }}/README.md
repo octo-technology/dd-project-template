@@ -9,6 +9,11 @@ Project Organization
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
+    │
+    ├── airflow            <- Exported Airflow workflows
+    │
+    ├── conf               <- Project configuration files 
+    │
     ├── data
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
@@ -31,8 +36,10 @@ Project Organization
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── lib{{ cookiecutter.project_slug }}        <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes lib{{ cookiecutter.project_slug }} a Python module
+    │   │
+    │   ├── logger.py      <- Logging helpers
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
