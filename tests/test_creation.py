@@ -61,6 +61,7 @@ def test_makefile(default_baked_project):
 
 def test_folders(default_baked_project):
     expected_dirs = [
+        'conf',
         'data',
         os.path.join('data', 'external'),
         os.path.join('data', 'interim'),
@@ -72,12 +73,12 @@ def test_folders(default_baked_project):
         'references',
         'reports',
         os.path.join('reports', 'figures'),
-        'src',
-        os.path.join('src', 'data'),
-        os.path.join('src', 'features'),
-        os.path.join('src', 'models'),
-        os.path.join('src', 'visualization')
-    ]
+        'libproject_name',
+        os.path.join('libproject_name', 'data'),
+        os.path.join('libproject_name', 'features'),
+        os.path.join('libproject_name', 'models'),
+        os.path.join('libproject_name', 'visualization')
+     ]
 
     ignored_dirs = [
         default_baked_project,
