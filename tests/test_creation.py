@@ -38,25 +38,11 @@ def test_readme(default_baked_project):
     assert no_curlies(readme_path)
 
 
-def test_license(default_baked_project):
-    license_path = os.path.join(default_baked_project, 'LICENSE')
-
-    assert os.path.exists(license_path)
-    assert no_curlies(license_path)
-
-
 def test_requirements(default_baked_project):
     reqs_path = os.path.join(default_baked_project, 'requirements.txt')
 
     assert os.path.exists(reqs_path)
     assert no_curlies(reqs_path)
-
-
-def test_makefile(default_baked_project):
-    makefile_path = os.path.join(default_baked_project, 'Makefile')
-
-    assert os.path.exists(makefile_path)
-    assert no_curlies(makefile_path)
 
 
 def test_folders(default_baked_project):
@@ -67,17 +53,12 @@ def test_folders(default_baked_project):
         os.path.join('data', 'interim'),
         os.path.join('data', 'processed'),
         os.path.join('data', 'raw'),
-        'docs',
-        'models',
         'notebooks',
-        'references',
-        'reports',
-        os.path.join('reports', 'figures'),
-        'libproject_name',
-        os.path.join('libproject_name', 'data'),
-        os.path.join('libproject_name', 'features'),
-        os.path.join('libproject_name', 'models'),
-        os.path.join('libproject_name', 'visualization')
+        'libs',
+        os.path.join('libs', 'project_name', 'data'),
+        os.path.join('libs', 'project_name', 'features'),
+        os.path.join('libs', 'project_name', 'models'),
+        os.path.join('libs', 'project_name', 'visualization'),
      ]
 
     ignored_dirs = [
